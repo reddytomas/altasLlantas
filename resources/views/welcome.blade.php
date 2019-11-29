@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Altas Llantas
                 </div>
 
                 <div class="links">
