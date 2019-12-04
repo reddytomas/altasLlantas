@@ -21,12 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/producto', 'ProductosController@index');
 Route::get('/perfil', 'UsuariosController@perfil' );
 Route::get('/crud', 'CrudController@index');
-<<<<<<< HEAD
 Route::get('/agregarProducto', 'CrudController@agregar');
 Route::get('/borrarProducto', 'CrudController@borrar');
-Route::get('/carritodecompras' 'CarritodecomprasController@index');
-=======
-Route::get('/agregarProducto', 'AgregarProductoController@index');
-Route::get('/borrarProducto', 'BorrarProductoController@index');
 Route::get('/carritodecompras', 'CarritodecomprasController@index');
->>>>>>> 31e15982d0e4cec4e6e632ba5555020ad0d0cd61
