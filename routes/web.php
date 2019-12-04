@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/producto', 'ProductosController@index');
-
-//Route::get('/preguntas'), ''
+Route::get('/crud', 'CrudController@index');
+Route::get('/agregarProducto', 'AgregarProductoController@index');
+Route::get('/borrarProducto', 'BorrarProductoController@index');
+Route::get('/carritodecompras' 'CarritodecomprasController@index');
