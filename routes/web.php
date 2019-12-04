@@ -23,4 +23,4 @@ Route::get('/perfil', 'UsuariosController@perfil' );
 Route::get('/crud', 'CrudController@index');
 Route::get('/agregarProducto', 'AgregarProductoController@index');
 Route::get('/borrarProducto', 'BorrarProductoController@index');
-Route::get('/carritodecompras' 'CarritodecomprasController@index');
+Route::get('/carritodecompras', 'CarritodecomprasController@index');
