@@ -16,6 +16,7 @@ class CreateUsuariosPruebaTable extends Migration
         Schema::create('usuarios_productos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+
         });
     }
 
@@ -27,5 +28,6 @@ class CreateUsuariosPruebaTable extends Migration
     public function down()
     {
         Schema::dropIfExists('usuarios_productos');
+        Schema::dropIfExists('prueba');
     }
 }
