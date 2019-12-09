@@ -24,3 +24,4 @@ Route::get('/crud', 'CrudController@index');
 Route::get('/agregarProducto', 'CrudController@agregar');
 Route::get('/borrarProducto', 'CrudController@borrar');
 Route::get('/carritodecompras', 'CarritodecomprasController@index');
+Route::get('/faq', 'FaqController@index');
