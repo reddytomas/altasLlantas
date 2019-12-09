@@ -23,9 +23,6 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,9 +31,21 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex justify-content-around">
+                          <a href="home.blade.php"  class="text-dark mr-3" id="_altasllantasfooter">Altas Llantas</a>
+                          <a class="nav-item nav-link " href="home.blade.php">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-item nav-link" href="producto.blade.php">Productos</a>
+                          <a class="nav-item nav-link" href="faq.blade.php">FAQ</a>
+                          <a class="nav-item nav-link" href="contacto.blade.php">Contacto</a>
+                          <a class="nav-item nav-link text-secundary" href="logout.php" role="button">Cerrar sesión</a> <br>
+
+                        </div>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest

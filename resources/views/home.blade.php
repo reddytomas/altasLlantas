@@ -24,7 +24,7 @@
 
 <body>
   <div class="container-fluid m-0 p-0">
-      <?php require_once '/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/header.php'; ?>
+
       <!-- carousel -------------------------------------->
 
       <section class="vh-80 _carousel">
@@ -229,8 +229,8 @@
       </article>
 
     </section>
-    <!-- FOOTER con redes y nada mas -->
-<?php require_once '/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/footer.php'; ?>
+  
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
