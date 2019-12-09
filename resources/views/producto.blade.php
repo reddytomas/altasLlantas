@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!doctype html>
 <html lang="es">
   <head>
@@ -23,24 +25,7 @@
   <div class="container-fluid m-0 p-0">
     <header>
       <!-- navbar -------------------------------------->
-      <nav class="navbar navbar-expand-lg navbar-light _ni_navbar mb-5">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav d-flex justify-content-around">
-          <a href="index.html"  class="text-dark mr-3" id="_altasllantasfooter">Altas Llantas</a>
-          <a class="nav-item nav-link " href="index.html">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="index.html#productos">Productos</a>
-          <a class="nav-item nav-link" href="faq.html">FAQ</a>
-          <a class="nav-item nav-link" href="index.html#contacto">Contacto</a>
-          <a class="nav-item nav-link" href="registrate.html">Registrate</a>
-          <a class="nav-item nav-link" href="login.html">Iniciar sesion</a>
-        </div>
-
-        </div>
-
+      
         <!-- iniciar, registro o mi perfil ----------------------->
         <ul class="_perfilList">
           <a class="nav-item nav-link"href="perfil.html" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
@@ -95,4 +80,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </div>
   </body>
+  @endsection
 </html>
