@@ -35,7 +35,7 @@
                         <div class="navbar-nav d-flex justify-content-around">
                           <a href="home.blade.php"  class="text-dark mr-3" id="_altasllantasfooter">Altas Llantas</a>
                           <a class="nav-item nav-link " href="home.blade.php">Home <span class="sr-only">(current)</span></a>
-                          <a class="nav-item nav-link" href="producto.blade.php">Productos</a>
+                          <a class="nav-item nav-link" href="/productos">Productos</a>
                           <a class="nav-item nav-link" href="faq.blade.php">FAQ</a>
                           <a class="nav-item nav-link" href="contacto.blade.php">Contacto</a>
                           <a class="nav-item nav-link text-secundary" href="logout.php" role="button">Cerrar sesión</a> <br>
