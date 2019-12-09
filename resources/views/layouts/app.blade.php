@@ -38,7 +38,7 @@
                           <a class="nav-item nav-link" href="/producto">Productos</a>
                           <a class="nav-item nav-link" href="/faq">FAQ</a>
                           <a class="nav-item nav-link" href="/home/#_contactarprimera">Contacto</a>
-                          <a class="nav-item nav-link text-secundary" href="/logout" role="button">Cerrar sesión</a> <br>
+
 
                         </div>
 
@@ -78,6 +78,7 @@
                             <ul class="_perfilList">
                               <a class="nav-item nav-link"href="/perfil" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
                               <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><li><i class="fas fa-shopping-cart"></i></li></a>
+                              <a class="nav-item nav-link text-secundary" href="/logout" role="button">Cerrar sesión</a> <br>
 
                             </ul>
                         @endguest
