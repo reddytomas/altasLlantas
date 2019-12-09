@@ -26,11 +26,6 @@
     <header>
       <!-- navbar -------------------------------------->
         <!-- iniciar, registro o mi perfil ----------------------->
-        <ul class="_perfilList">
-          <a class="nav-item nav-link"href="/perfil" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
-          <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><li><i class="fas fa-shopping-cart"></i></li></a>
-
-        </ul>
       </nav>
 
     </header>
@@ -43,7 +38,7 @@
         <p>Estas fueron tus ultimas compras.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Ver compras</a> <br>
         <p><br>Este es tu carrito de compras, donde podes seleccionar lo que quieras comprar. </p>
-        <a class="btn btn-primary btn-lg" href="carritodecompras.html" role="button"><i class="fas fa-shopping-cart"></i></a>
+        <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><i class="fas fa-shopping-cart"></i></a>
 
     </div>
     <!-- FOOTER con redes y nada mas -->
