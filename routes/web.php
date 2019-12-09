@@ -20,8 +20,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/producto', 'ProductosController@index')->name('producto');
 Route::get('/perfil', 'UsuariosController@index' );
+//CRUD
 Route::get('/crud', 'CrudController@index');
 Route::get('/agregarProducto', 'CrudController@agregar');
 Route::get('/borrarProducto', 'CrudController@borrar');
+Route::get('/detalleProducto', 'DetalleController@index');
+Route::get('/editarProducto', 'EditarController@index');
+
+
 Route::get('/carritodecompras', 'CarritodecomprasController@index');
 Route::get('/faq', 'FaqController@index');
