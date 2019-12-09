@@ -1,7 +1,7 @@
 <?php
-  require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Loader.php');
-  require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/funciones.php');
-  require_once("/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Consulta.php");
+  //require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Loader.php');
+  //require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/funciones.php');
+  //require_once("/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Consulta.php");
   //Esta condición la cree para controlar si debo listar las películas en función de lo que usuario quiere ver por medio de consultar o simplemente cuando carga la página
   if ($_GET && !empty(trim('busqueda'))){
     $productos = $consulta->buscarProductos($bd,'productos',$_GET['busqueda']);
@@ -23,7 +23,6 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>
-    <?php require 'parciales/header.php' ?>
     <div class="spacer"></div>
     <h2 class="text-center">Listado de Productos!!!</h2>
     <div>
@@ -48,9 +47,9 @@
             <tr>
               <td><?=$value['id'];?></td>
               <td><?=$value['marca'];?></td>
-              <td><a href="detalleProducto.php?id=<?=$value['id'];?>"><ion-icon name="eye"></ion-icon></a></td>
-              <td><a href="editarProducto.php?id=<?=$value['id'];?>"><ion-icon name="create"></ion-icon></a></td>
-              <td><a href="borrarProducto.php?id=<?=$value['id'];?>"><ion-icon name="trash"></ion-icon></td></a>
+              <td><a href="/detalleProducto?id=<?=$value['id'];?>"><ion-icon name="eye"></ion-icon></a></td>
+              <td><a href="/editarProducto?id=<?=$value['id'];?>"><ion-icon name="create"></ion-icon></a></td>
+              <td><a href="/borrarProducto?id=<?=$value['id'];?>"><ion-icon name="trash"></ion-icon></td></a>
             </tr>
 
           <?php endforeach;?>
