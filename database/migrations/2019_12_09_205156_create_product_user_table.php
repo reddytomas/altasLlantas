@@ -13,7 +13,7 @@ class CreateProductUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_users', function (Blueprint $table) {
+        Schema::create('product_user', function (Blueprint $table) {
             $table->Increments('id');
             $table->Integer('users_id');
             $table->Integer('product_id');
