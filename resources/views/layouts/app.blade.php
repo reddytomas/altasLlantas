@@ -37,7 +37,7 @@
                           <a class="nav-item nav-link " href="/home">Home <span class="sr-only">(current)</span></a>
                           <a class="nav-item nav-link" href="/producto">Productos</a>
                           <a class="nav-item nav-link" href="/faq">FAQ</a>
-                          <a class="nav-item nav-link" href="#_contactarprimera">Contacto</a>
+                          <a class="nav-item nav-link" href="/home/#_contactarprimera">Contacto</a>
                           <a class="nav-item nav-link text-secundary" href="/logout" role="button">Cerrar sesión</a> <br>
 
                         </div>
@@ -85,7 +85,6 @@
             @yield('content')
         </main>
     </div>
-    ?
   <script src="{{asset('js/master.js')}}"></script>
 </body>
 </html>

@@ -25,10 +25,10 @@
   <div class="container-fluid m-0 p-0">
     <header>
       <!-- navbar -------------------------------------->
-      
+
         <!-- iniciar, registro o mi perfil ----------------------->
         <ul class="_perfilList">
-          <a class="nav-item nav-link"href="perfil.html" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
+          <a class="nav-item nav-link"href="/perfil" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
           <a class="btn btn-primary btn-lg" href="carritodecompras.html" role="button"><li><i class="fas fa-shopping-cart"></i></li></a>
 
         </ul>
