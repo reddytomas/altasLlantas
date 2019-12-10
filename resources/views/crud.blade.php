@@ -3,13 +3,15 @@
   //require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/funciones.php');
   //require_once("/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Consulta.php");
   //Esta condición la cree para controlar si debo listar las películas en función de lo que usuario quiere ver por medio de consultar o simplemente cuando carga la página
-  if ($_GET && !empty(trim('busqueda'))){
-    $productos = $consulta->buscarProductos($bd,'productos',$_GET['busqueda']);
-  }else{
-    $productos = $consulta->listarProductos($bd,'productos');
-  }
+  //if ($_GET && !empty(trim('busqueda'))){
+    //$productos = $consulta->buscarProductos($bd,'productos',$_GET['busqueda']);
+  //}else{
+    //$productos = $consulta->listarProductos($bd,'productos');
+  //}
 
 ?>
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -65,3 +67,4 @@
 
 </body>
 </html>
+@endsection
