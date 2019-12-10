@@ -32,7 +32,14 @@
                     <h5 class="card-title text-center"></h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nisi minima nemo expedita distinctio ipsa eum magnam fugiat! Aspernatur, illo.</p>
                 </div>
-                <
+                <ul class="list-group list-group-flush">
+                  @foreach ($productos as $producto)
+                    <li class="list-group-item ">Marca: {{$producto->marca}}</li>
+                    <li class="list-group-item ">Categoria: {{$producto->categoria}}</li>
+                    <li class="list-group-item">Talle: {{$producto->talle}}</li>
+                    <li class="list-group-item">Precio: {{$producto->precio}}</li>
+                </ul>
+                  @endforeach
             </div>
             <a href="/crud" class="btn btn-danger" id="dangerman">Volver</a>
         </div>
