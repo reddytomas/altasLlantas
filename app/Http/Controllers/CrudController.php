@@ -8,7 +8,7 @@ use App\Http\Controllers\ProductosController;
 class CrudController extends Controller
 {
     public function index(){
-      return view('crud');
+      return view('crud')->with('productos', Producto::paginate(4));
     }
     public function agregar(){
       return view('agregarProducto');

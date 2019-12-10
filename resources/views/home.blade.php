@@ -60,148 +60,15 @@
 <!-- PRODUCTOS ---------------------------------------------->
     <div><h1 class="_tituloPagina ml-1 mr-1  pt-3 bg-light text-dark pl-3 mb-3 mt-0 text-center" id="productos">Nuestras zapatillas</h1></div>
     <section class="_articles row p-3 mt-10 mr-0 ml-0" id="productos">
-
+      @foreach ($productos as $producto)
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/azules.png" alt="adidas">
-        <h4><strong>Adidas</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
+      <a href="/detalleProducto">
+        <img class="d-block w-100"src="{{ Storage::url('img/productos/'. $producto->featured_img )}}" alt="...">
+        <h4><strong>{{$producto->marca}}</strong></h4>
+        <p>{{$producto->categoria}}: ${{$producto->precio}}</p>
       </a>
       </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/basquet.png" alt="nike">
-        <h4><strong>Nike</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php" >
-        <img class="d-block w-100"src="IMG/fila.png" alt="reebok">
-        <h4><strong>Reebok</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/gris.png" alt="adidas">
-        <h4 class="color:black"><strong>Adidas</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/vans.png" alt="nike">
-        <h4><strong>Nike</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/swish.png" alt="reebok">
-        <h4><strong>Reebok</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/fila.png" alt="adidas">
-        <h4><strong>Adidas</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/vans.png" alt="nike">
-        <h4><strong>Nike</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php" >
-        <img class="d-block w-100"src="IMG/fila.png" alt="reebok">
-        <h4><strong>Reebok</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/swish.png" alt="adidas">
-        <h4 class="color:black"><strong>Adidas</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/basquet.png" alt="nike">
-        <h4><strong>Nike</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/swish.png" alt="reebok">
-        <h4><strong>Reebok</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/vans.png" alt="adidas">
-        <h4><strong>Adidas</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/basquet.png" alt="nike">
-        <h4><strong>Nike</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php" >
-        <img class="d-block w-100"src="IMG/azules.png" alt="reebok">
-        <h4><strong>Reebok</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/gris.png" alt="adidas">
-        <h4 class="color:black"><strong>Adidas</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/swish.png" alt="nike">
-        <h4><strong>Nike</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
-
-      <article class="_producto col-sm-6 col-md-3 col-lg-2">
-      <a href="detallado.php">
-        <img class="d-block w-100"src="IMG/vans.png" alt="reebok">
-        <h4><strong>Reebok</strong></h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </a>
-      </article>
+      @endforeach
 
     </section >
 
@@ -247,7 +114,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </div>
-    
+
   </body>
 </html>
 
