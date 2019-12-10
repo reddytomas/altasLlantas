@@ -7,10 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -67,10 +66,9 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Cerrar Sesión') }}
                                     </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="">
                                         @csrf
                                     </form>
                                 </div>
@@ -78,7 +76,7 @@
                             <ul class="_perfilList">
                               <a class="nav-item nav-link"href="/perfil" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
                               <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><li><i class="fas fa-shopping-cart"></i></li></a>
-                              <a class="nav-item nav-link text-secundary" href="/logout" role="button">Cerrar sesión</a> <br>
+
 
                             </ul>
                         @endguest
