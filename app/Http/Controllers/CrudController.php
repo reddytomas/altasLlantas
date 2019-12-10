@@ -20,7 +20,7 @@ class CrudController extends Controller
     public function buscar(Request $request)
     {
         if($request->has('buscar')){
-            $products = Producto::where('name','LIKE','%' . $request->get('buscar') . '%')->paginate(8);
+            $products = Producto::where('marca','LIKE','%' . $request->get('buscar') . '%')->paginate(8);
         }else{
             $producs = Producto::paginate(8);
         }
