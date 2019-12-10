@@ -1,34 +1,28 @@
 
-
-  //if($_POST){
-    //Esto se ejecuta univcamente cuando el usuario acciona el boton de Actualizar Película
-    $producto = new Producto($_POST['marca'],$_POST['categoria'],$_POST['talle'],$_POST['precio']);
-    $errores = $validar->ValidadorProducto($producto);
-    //Les recuerdo que el método de validación de errores no está completo, sería bueno que ustdes culminen la validación de todos los campos
-
-    if(count($errores) == 0){
-      $consulta->actualizarProducto($bd,'productos',$producto,$_GET['id']);
-    }
-  }
-  //Aquí genero el listado de los generos, para luego usarlos en el select - option del formulario y de esa forma lograr mostrar los generos para que el usuario seleccione el que desee
-  $usuarios = $consulta->listarUsuarios($bd,'usuarios');
-  //En la variable $movie incorporo los datos de la película que el usuario desea modificar
-  $producto = $consulta->detalleProducto($bd,'productos','usuarios',$_GET['id']);
-  @extends('layouts.app')
-  @section('content')
+@extends('layouts.app')
+@section('content')
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Registro de Productos</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/master.css">
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    </head>
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fuentes y nuestro stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Sedgwick+Ave|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Raleway|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>Altas LLantas</title>
+  </head>
     <body>
 
 
@@ -57,7 +51,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar Producto</button>
                 </form>
-                <a href="crud.php" class="btn btn-danger">Volver</a>
+                <a href="/crud" class="btn btn-danger" id="dangerman">Volver</a>
             </div>
         </div>
         <br>

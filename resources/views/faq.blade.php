@@ -51,7 +51,7 @@
     <label for="item-4">Pregunta 4:</label>
    <input type="checkbox" name="four" id="item-4" checked>
    <div class="hide">
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laborv</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labor</p>
    </div>
 
    <label for="item-5">Pregunta 5:</label>

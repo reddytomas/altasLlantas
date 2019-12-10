@@ -1,20 +1,25 @@
-
-//$producto = $consulta->detalleProducto($bd,'productos','usuarios',$_GET['id']);
 @extends('layouts.app')
 @section('content')
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    @foreach ($productos as $producto)
-    <title>{{$producto->marca}}</title>
-    @endforeach
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/master.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fuentes y nuestro stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Sedgwick+Ave|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Raleway|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>Altas LLantas</title>
+  </head>
 <body>
 
     <div class="spacer"></div>
@@ -36,7 +41,7 @@
                 </ul>
                   @endforeach
             </div>
-            <a href="/crud" class="btn btn-danger">Volver</a>
+            <a href="/crud" class="btn btn-danger" id="dangerman">Volver</a>
         </div>
 
     </div>

@@ -1,27 +1,23 @@
-<?php
-  //require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Loader.php');
-  //require_once('/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/funciones.php');
-  //require_once("/Users/tomasreddy/Desktop/AltasLlantas/AltasLlantas/app/Consulta.php");
-  //Esta condición la cree para controlar si debo listar las películas en función de lo que usuario quiere ver por medio de consultar o simplemente cuando carga la página
-  //if ($_GET && !empty(trim('busqueda'))){
-    //$productos = $consulta->buscarProductos($bd,'productos',$_GET['busqueda']);
-  //}else{
-    //$productos = $consulta->listarProductos($bd,'productos');
-  //}
-
-?>
 @extends('layouts.app')
 @section('content')
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Productos</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fuentes y nuestro stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Sedgwick+Ave|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Raleway|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>
