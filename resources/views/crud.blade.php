@@ -45,16 +45,17 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($productos as $key => $value) :?>
+          @foreach ($productos as $producto)
             <tr>
-              <td><?=$value['id'];?></td>
-              <td><?=$value['marca'];?></td>
-              <td><a href="/detalleProducto?id=<?=$value['id'];?>"><ion-icon name="eye"></ion-icon></a></td>
-              <td><a href="/editarProducto?id=<?=$value['id'];?>"><ion-icon name="create"></ion-icon></a></td>
-              <td><a href="/borrarProducto?id=<?=$value['id'];?>"><ion-icon name="trash"></ion-icon></td></a>
+              <td>{{$producto->id}}</td>
+              {{$producto->id}}
+              <td>{{$producto->marca}}</td>
+              <td><a href="/detalleProducto?id={{$producto->id}}"><ion-icon name="eye"></ion-icon></a></td>
+              <td><a href="/editarProducto?id={{$producto->id}}"><ion-icon name="create"></ion-icon></a></td>
+              <td><a href="/borrarProducto?id={{$producto->id}}"><ion-icon name="trash"></ion-icon></td></a>
             </tr>
 
-          <?php endforeach;?>
+          @endforeach
           <tr>
 
           </tr>
