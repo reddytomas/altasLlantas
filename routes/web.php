@@ -31,3 +31,4 @@ Route::get('/editarProducto', 'EditarController@index');
 Route::get('/carritodecompras', 'CarritodecomprasController@index');
 Route::get('/faq', 'FaqController@index');
 Route::get('/detallado', 'DetalladoController@index');
+Route::get('/buscarProducto', 'BuscarController@index');

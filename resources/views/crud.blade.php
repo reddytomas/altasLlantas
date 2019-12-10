@@ -25,8 +25,10 @@
     <h2 class="text-center">Listado de Productos!!!</h2>
     <div>
       <!--Este es formulario para que el usuario busque la película quje desee-->
+        @foreach ($productos as $producto)
       <form action="" method="get">
-        <input type="submit" value="Buscar"><input type="text" name="buscar">
+        <a href="/buscarProducto?marca={{$producto->marca}}"><input type="submit" value="Buscar"><input type="text" name="buscarProducto"></a>
+        @endforeach
       </form>
     </div>
     <div class="spacer">
