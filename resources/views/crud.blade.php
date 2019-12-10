@@ -26,7 +26,7 @@
     <div>
       <!--Este es formulario para que el usuario busque la película quje desee-->
       <form action="" method="get">
-        <input type="submit" value="Buscar"><input type="text" name="busqueda">
+        <input type="submit" value="Buscar"><input type="text" name="buscar">
       </form>
     </div>
     <div class="spacer">

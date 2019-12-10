@@ -17,4 +17,14 @@ class CrudController extends Controller
     public function borrar(){
       return view('borrarProducto');
     }
+    public function buscar(Request $request)
+    {
+        if($request->has('buscar')){
+            $products = Producto::where('name','LIKE','%' . $request->get('buscar') . '%')->paginate(8);
+        }else{
+            $producs = Producto::paginate(8);
+        }
+        $products->appends($request->only('buscar'));
+        return view('crud')->with('productos',$products);
+    }
 }
