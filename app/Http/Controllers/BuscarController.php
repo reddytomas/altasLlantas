@@ -12,12 +12,12 @@ class BuscarController extends Controller
     }
     public function buscar(Request $request)
     {
-        if($request->has('buscar')){
-            $products = Producto::where('marca','LIKE','%' . $request->get('buscar') . '%')->paginate(8);
+        if($request->has('buscarProducto')){
+            $products = Producto::where('marca','LIKE','%' . $request->get('buscarProducto') . '%')->paginate(8);
         }else{
             $producs = Producto::paginate(8);
         }
-        $products->appends($request->only('buscar'));
+        $products->appends($request->only('buscarProducto'));
         return view('crud')->with('productos',$products);
     }
 }
