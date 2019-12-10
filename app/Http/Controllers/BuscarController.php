@@ -8,7 +8,7 @@ use App\Http\Controllers\ProductosController;
 class BuscarController extends Controller
 {
     public function index(){
-      return view('buscar');
+      return view('buscarProducto');
     }
     public function buscar(Request $request)
     {
