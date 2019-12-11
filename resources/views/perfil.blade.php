@@ -34,6 +34,8 @@
       <h1 class=" _tituloPagina ml-1 mr-1  bg-light text-dark pl-3 mb-3  text-center">Bienvenido a tu Perfil!</h1>
       <img src="IMG/perfil.jpg" alt="">
         <p class="lead">Aqui podras encontrar informacion de tu perfil...</p>
+        <p>Email:</p>
+        <p>Nombre:</p>
         <hr class="my-4">
         <p>Estas fueron tus ultimas compras.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Ver compras</a> <br>
