@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/producto', 'ProductosController@index')->name('producto');
-Route::get('/perfil', 'UsuariosController@index' );
+Route::get('/perfil/{id}', 'UsuariosController@index' );
 //CRUD
 Route::get('/crud', 'CrudController@index');
 Route::get('/agregarProducto', 'CrudController@agregar');
