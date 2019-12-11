@@ -31,9 +31,9 @@
         </article>
 
         <article class="col-sm-12 col-12-md col-lg-6">
-          <h3 class="d-inline-block">Nike Basquet</h3>
+          <h3 class="d-inline-block">{{$producto->marca}} {{$producto->categoria}}</h3>
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In tenetur temporibus nisi consequatur, consequuntur commodi. Expedita id nulla eius aperiam distinctio, molestiae velit sit ratione exercitationem officia, quaerat rerum mollitia?</p>
-          <h5 class="">Precio: $3000</h5>
+          <h5 class="">Precio: ${{$producto->precio}}</h5>
           <select class="custom-select ">
             <option value="1">1</option>
             <option value="2">2</option>

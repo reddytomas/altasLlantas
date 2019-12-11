@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Producto;
 
 class DetalladoController extends Controller
 {
-    public function index(){
-      return view('detallado');
+    public function index($id){
+      $producto = Producto::find($id);
+      return view('detallado', compact('producto'));
     }
 }
