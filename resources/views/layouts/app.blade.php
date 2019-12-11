@@ -74,7 +74,7 @@
                                 </div>
                             </li>
                             <ul class="_perfilList">
-                              <a class="nav-item nav-link"href="/perfil" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
+                              <a class="nav-item nav-link"href="/perfil/{{auth()->user()->id}}" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
                               <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><li><i class="fas fa-shopping-cart"></i></li></a>
 
 
