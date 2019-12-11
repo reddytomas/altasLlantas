@@ -1,26 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!doctype html>
-<html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-    <!-- Bootstrap CSS -->
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Fuentes y nuestro stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Sedgwick+Ave|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Raleway|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
-
-    <link rel="stylesheet" href="css/index.css">
-    <title>Altas LLantas</title>
-  </head>
 
 <body>
   <div class="container-fluid m-0 p-0">
@@ -97,16 +77,6 @@
 
     </section>
 
-    <footer class="bg-light w-100">
-      <p class="text-center" id="_altasllantasfooter">Altas Llantas</p>
-      <ul class="list-unstyled list-group-horizontal d-flex justify-content-around ">
-        <li><a href=""><i class="fab fa-instagram fa-2x "></i></a></li>
-        <li><a href=""><i class="fab fa-facebook-square fa-2x"></i></a></li>
-        <li><a href=""><i class="fab fa-twitter-square fa-2x"></i></a></li>
-      </ul>
-      <div id="volverArriba"class="text-center text-dark"><a href="#" class="">Volver arriba</a></div>
-
-    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -116,6 +86,6 @@
   </div>
 
   </body>
-</html>
+
 
 @endsection
