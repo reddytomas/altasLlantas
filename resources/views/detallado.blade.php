@@ -44,7 +44,7 @@
             <option value="2">US 10</option>
             <option value="3">US 11</option>
           </select>
-          <button type="button" class="btn btn-dark">Agregar al carrito </button>
+          <a href="/carritodecompras/{{$producto->id}}"><button type="button" class="btn btn-dark">Agregar al carrito </button></a>
         </article>
 
         </li>
