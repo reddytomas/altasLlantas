@@ -44,7 +44,7 @@
                           <a class="nav-item nav-link " href="/home">Home <span class="sr-only">(current)</span></a>
                           <a class="nav-item nav-link" href="/items">Productos</a>
                           <a class="nav-item nav-link" href="/faq">FAQ</a>
-                          <a class="nav-item nav-link" href="/home/#_contactarprimera">Contacto</a>
+                          <a class="nav-item nav-link" href="/contacto">Contacto</a>
 
 
                         </div>

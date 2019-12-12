@@ -33,3 +33,4 @@ Route::get('/faq', 'FaqController@index');
 Route::get('/detallado/{id}', 'DetalladoController@index')->middleware('auth');
 Route::get('/buscarProducto', 'BuscarController@index');
 Route::get('/items', 'ItemsController@index');
+Route::get('/contacto', 'ContactoController@index');
