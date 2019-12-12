@@ -98,17 +98,7 @@
 
     <!-- CONTACTO  y maps----------------------------->
 
-    <!-- FOOTER con redes y nada mas -->
-    <footer class="bg-light w-100">
-      <p class="text-center" id="_altasllantasfooter">Altas Llantas</p>
-      <ul class="list-unstyled list-group-horizontal d-flex justify-content-around ">
-        <li><a href=""><i class="fab fa-instagram fa-2x "></i></a></li>
-        <li><a href=""><i class="fab fa-facebook-square fa-2x"></i></a></li>
-        <li><a href=""><i class="fab fa-twitter-square fa-2x"></i></a></li>
-      </ul>
-      <div id="volverArriba"class="text-center text-dark"><a href="#" class="">Volver arriba</a></div>
-
-    </footer>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
