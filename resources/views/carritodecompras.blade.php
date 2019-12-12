@@ -25,14 +25,13 @@
   <div class="container-fluid m-0 p-0">
       <div><h1 class="_tituloPagina ml-1 mr-1  bg-light text-dark pl-3 mb-3  text-center">Carrito de Compras</h1>
       </div>
-      @foreach ($productos as $producto)
       <section class="row ml-0 mr-0">
         <article class="col-sm-12 col-md-8">
           <ul class="list-group list-group-flush w-100 ml-2 ">
             <li class=" list-group-item  w-90">
               <a href=""><i class="fas fa-window-close float-right fa-2x"></i></a>
               <img class="float-left mr-3 " src="../IMG/basquet.png" alt="basquet">
-              <h3 class="d-inline-block">{{$producto->marca}} {{$producto->categoria}}</h3>
+              <h3 class="d-inline-block"></h3>
               <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In tenetur temporibus nisi consequatur, consequuntur commodi. Expedita id nulla eius aperiam distinctio, molestiae velit sit ratione exercitationem officia, quaerat rerum mollitia?</p>
               <h5 class="">Precio: $3000</h5>
               <select class="custom-select ">
@@ -86,7 +85,6 @@
 
             </article>
           </section>
-          @endforeach
         </article>
 <style>
         button:hover {
