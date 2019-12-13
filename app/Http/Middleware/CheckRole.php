@@ -19,7 +19,7 @@ class CheckRole
         if ($request->user()->rol == 9) {
           return $next($request);
         } else {
-          return redirect('/productos');
+          return redirect('/home');
         }
     }
 }
