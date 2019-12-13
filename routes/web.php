@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/producto', 'ProductosController@index')->name('producto');
 Route::get('/perfil/{id}', 'UsuariosController@index' );
 //CRUD
-Route::get('/crud', 'CrudController@index');
+Route::get('/crud', 'CrudController@index')->middleware('rol');
 Route::get('/agregarProducto', 'CrudController@agregar');
 Route::get('/borrarProducto', 'CrudController@borrar');
 Route::get('/detalleProducto', 'DetalleController@index');

@@ -27,4 +27,5 @@ class CrudController extends Controller
         $products->appends($request->only('buscarProducto'));
         return view('crud')->with('productos',$products);
     }
+
 }
