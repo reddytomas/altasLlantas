@@ -10,7 +10,8 @@
 
 
         <form action="" method="get">
-        <a href="/buscarProducto"><input type="submit" value="Buscar"><input type="text" name="buscarProducto"></a>
+          <input type="text" name="buscarProducto">
+          <input type="submit" value="Buscar">
         </form>
 
 
