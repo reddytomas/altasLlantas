@@ -45,6 +45,7 @@
                           <a class="nav-item nav-link" href="/items">Productos</a>
                           <a class="nav-item nav-link" href="/faq">FAQ</a>
                           <a class="nav-item nav-link" href="/contacto">Contacto</a>
+                          
 
 
                         </div>
