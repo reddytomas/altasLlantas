@@ -9,10 +9,17 @@
       <!--Este es formulario para que el usuario busque la película quje desee-->
 
 
-        <form action="" method="get">
-          <input type="text" name="buscarProducto">
-          <input type="submit" value="Buscar">
-        </form>
+      <form action="/buscar" method="POST" class="col-12">
+            @csrf
+            <div class="page__demo">
+              <label class="field a-field a-field_a1 page__field">
+                <input class="field__input a-field__input" placeholder="¿Que deseas buscar?" id="inputB" name="buscar" required>
+                  <span class="a-field__label-wrap">
+                    <span class="a-field__label" id="buscar">Buscador</span>
+                  </span>
+              </label>
+            </div>
+      </form>
 
 
     </div>
@@ -22,6 +29,7 @@
           <tr>
             <th>ID</th>
             <th>Marca</th>
+            <th>Categoria</th>
             <th>Ver</th>
             <th>Editar</th>
             <th>Eliminar</th>
@@ -31,8 +39,8 @@
           @foreach ($productos as $producto)
             <tr>
               <td>{{$producto->id}}</td>
-              {{$producto->id}}
               <td>{{$producto->marca}}</td>
+              <td>{{$producto->categoria}}</td>
               <td><a href="/detalleProducto?id={{$producto->id}}"><ion-icon name="eye"></ion-icon></a></td>
               <td><a href="/editarProducto?id={{$producto->id}}"><ion-icon name="create"></ion-icon></a></td>
               <td><a href="/borrarProducto?id={{$producto->id}}"><ion-icon name="close"></ion-icon></td></a>
