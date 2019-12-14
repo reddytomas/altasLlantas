@@ -16,6 +16,8 @@
 
                             <div class="col-md-6">
                                 <input id="userName" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                  
+                                  <div id="errorNombreUsuario"></div>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -36,6 +38,26 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row" class="col-md-6">
+                            <div class="form-group" >
+                              <label for="provincia">Provincia</label>
+                              <select name="provincia" id="provincia">
+
+                              </select>
+                            </div>
+                            <div name="errorProvincia">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row" class="col-md-6">
+                            <div class="form-group">
+                              <label for="municipio">Municipio</label>
+                              <select name="municipio" id="municipio">
+
+                              </select>
                             </div>
                         </div>
 
@@ -75,6 +97,6 @@
     </div>
 </div>
 
-<script src="{{asset('js/register.js')}}"></script>
+<script src="{{asset('/js/register.js')}}"></script>
 
 @endsection
