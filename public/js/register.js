@@ -3,13 +3,15 @@ window.addEventListener('load',function(){
 
   let fomulario = document.querySelector('#formulario');
   //Con esta línea hago que el al cargar el formulario, el cursor se posicione en el campo name
-  formulario.elements.userName.focus();
+  formulario.elements.name.focus();
 
   formulario.onsubmit = function(evento) {
+
     //Aquí evito que por defecto se envie el formulario
     //Si el formulario pasa las validaciones doy el ingreso al usuario
     //Si los campos no pasan las validaciones, entonces no envio el formulario, que es la acción por defecto del submit, en el caso contrario este se envía.
     if (!validateRegisterForm()) {
+
       evento.preventDefault()
     }else{
       formulario.submit()
@@ -18,28 +20,30 @@ window.addEventListener('load',function(){
   //Esta es la función que valida todos los campos del formulario
   function validateRegisterForm() {
     //destructuración de código.
-    let { userName, email, password, password-confirm } = formulario.elements
-
-    if (!validateUsername(userName)) return false;
+    let { name, email, password, password_confirm, provincia, municipio } = formulario.elements
+    //console.log(formulario.elements)S
+    if (!validateName(name)) return false;
     if (!validateEmail(email)) return false;
-    if (!validatePassword(password)) return false;
+    if (!validateEmail(provincia)) return false;
+    if (!validateMunicipio(municipio)) return false;
+    if (!validateProvincia(password)) return false;
     if (!validatePasswordRepeat(password, repeat)) return false;
 
     return true;
     }
     //Aquí comoenzo a realizar cada una de las funciones encgadas de hacer las validaciones.
-    function validateUsername(userName) {
+    function validateName(name) {
       let errorUserName = document.getElementById('errorNombreUsuario');
-      if (username.value.length < 6){
+      if (name.value.length < 6){
         errorUserName.innerHTML = "Nombre de usuario no puede tener menos de 6 digitos";
         errorUserName.classList.add('alert-danger');
-        username.classList.add('is-invalid');
+        name.classList.add('is-invalid');
         return false;
       } else{
         errorUserName.innerHTML = "";
         errorUserName.classList.remove('alert-danger');
-        username.classList.remove('is-invalid');
-        username.classList.add('is-valid');
+        name.classList.remove('is-invalid');
+        name.classList.add('is-valid');
         formulario.elements.email.focus();
         return true;
       }
@@ -103,14 +107,14 @@ window.addEventListener('load',function(){
       if (password.value != repeat.value) {
         errorPasswordRepeat.innerHTML = "Las conraseñas no coinciden";
         errorPasswordRepeat .classList.add('alert-danger');
-        repeat.classList.add('is-invalid');
+        passwordrepeat.classList.add('is-invalid');
         return false;
 
       }else{
         errorPasswordRepeat .innerHTML = "";
         errorPasswordRepeat.classList.remove('alert-danger');
-        repeat.classList.remove('is-invalid');
-        repeat.classList.add('is-valid');
+        passwordrepeat.classList.remove('is-invalid');
+        passwordrepeat.classList.add('is-valid');
 
 
         return true;
@@ -119,5 +123,82 @@ window.addEventListener('load',function(){
 
     }
 
+    function validateProvincia(provincia){
+      let errorProvincia = dociment.getElementById('errorProvincia');
+      if (provincia.value == "") {
+        provincia.classList.add('is-invalid');
+        errorProvincia.innerHTML = "seleccione la provincia";
+        errorProvincia.classList.add('text-danger');
+        return false;
+      }else {
+        provincia.classList.add('is-valid');
+        provincia.classList.remove('is-invalid');
+        errorProvincia.innerHTML = "";
+        errorProvincia.classList.remove('text-danger');
+        return true;
+      }
+    }
+
+    function validateMunicipio(municipio){
+      let errorMunicipio = dociment.getElementById('errorMunicipio');
+      if (municipio.value == "") {
+        municipio.classList.add('is-invalid');
+        errorMunicipio.innerHTML = "seleccione la provincia";
+        errorMunicipio.classList.add('text-danger');
+        return false;
+      }else {
+        provincia.classList.add('is-valid');
+        provincia.classList.remove('is-invalid');
+        errorProvincia.innerHTML = "";
+        errorProvincia.classList.remove('text-danger');
+        return true;
+      }
+    }
+
+    // capturar elementos provincia y municipio.
+
+    let provinciaSeleccionada = document.querySelector('#provincia');
+    let municipioSeleccionado = document.querySelector('#municipio');
+    // llamo a la funciones
+    armarProvincias();
+
+    // ejecuto la funcion, los datos siempre van a venir en json cunado voy contra una api, pero en nuestro form viajan en modo text
+    function armarProvincias(){
+      fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre')
+      .then(function(respuesta){
+        return respuesta.json()
+      })
+      .then(function(datosProvincia){
+        console.log(datosProvincia)
+        provinciaSeleccionada.innerHTML = "<option value='' >seleccion provincia </div>"
+        for (let seleccionProvincia of datosProvincia.provincias) {
+          let opcionProvincia = document.createElement('option')
+          opcionProvincia.setAttribute('value', seleccionProvincia.id)
+          opcionProvincia.innerHTML = seleccionProvincia.nombre
+          provinciaSeleccionada.append(opcionProvincia)
+        }
+      })
+    }
+    provinciaSeleccionada.addEventListener('change', function(){
+      seleccion = provinciaSeleccionada.value;
+      armarMunicipios(seleccion);
+    })
+
+    function armarMunicipios(){
+      fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=22&campos=id,nombre&max=100')
+      .then(function(respuesta){
+        return respuesta.json()
+      })
+      .then(function(datosMunicipio){
+        console.log(datosMunicipio)
+        municipioSeleccionado.innerHTML = "<option value='' >seleccion municipio </div>"
+        for (let seleccionMunicipio of datosMunicipio.municipios) {
+          let opcionMunicipio = document.createElement('option')
+          opcionMunicipio.setAttribute('value', seleccionMunicipio.id)
+          opcionMunicipio.innerHTML = seleccionMunicipio.nombre
+          municipioSeleccionado.append(opcionMunicipio)
+        }
+      })
+    }
 
 });

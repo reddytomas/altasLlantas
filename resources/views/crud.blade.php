@@ -35,7 +35,7 @@
               <td>{{$producto->marca}}</td>
               <td><a href="/detalleProducto?id={{$producto->id}}"><ion-icon name="eye"></ion-icon></a></td>
               <td><a href="/editarProducto?id={{$producto->id}}"><ion-icon name="create"></ion-icon></a></td>
-              <td><a href="/borrarProducto?id={{$producto->id}}"><ion-icon name="trash"></ion-icon></td></a>
+              <td><a href="/borrarProducto?id={{$producto->id}}"><ion-icon name="close"></ion-icon></td></a>
             </tr>
 
           @endforeach
