@@ -19,6 +19,7 @@
     <!-- Scripts -->
     <<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -46,7 +47,7 @@
                           <a class="nav-item nav-link" href="/items">Productos</a>
                           <a class="nav-item nav-link" href="/faq">FAQ</a>
                           <a class="nav-item nav-link" href="/contacto">Contacto</a>
-                          
+
 
 
                         </div>
@@ -100,6 +101,7 @@
         </main>
     </div>
   <script src="{{asset('js/master.js')}}"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 <footer class="bg-light w-100">
   <p class="text-center" id="_altasllantasfooter">Altas Llantas</p>
