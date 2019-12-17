@@ -63,12 +63,41 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-    }
+      //Este es una nueva forma de guardar la imagen
+      //Si el usuario no selecciona el archivo ya yo tengo uno por defecto
+      $nombreArchivo = 'user_default.jpg';
+      //Aquí les dejo una forma de guardar la imagen
+      $request = request();
+      //dd($request);
+      $imagen = $request->file('avatar');
+      //dd($imagen);
+      //Aquí atrapo creo el nombre de mi archivo con uniqid() y dispongo la extensión con la función extension()
+      $nombreArchivo = uniqid('img-') . '.' . $imagen->extension();
+      //Aquí guardo la imagen en el servidor carpeta store/public/avatars
+      $imagen->storePubliclyAs("public/avatars", $nombreArchivo);
+
+      //--------------------------------------------------
+      //Anteriormente como se hacia el mismo código Versión de Laravel 5.5
+          //dd($data);
+         // $nombreArchivo = 'user_default.jpg';
+         //debemos tener en cuenta que si hay un archivo, lo subimos y le guardamos la ruta
+         //if(isset($data['avatar'])){
+         //Al archivo que el usuario seleccione lo voy a guardar en el filesystem de laravel
+         //$rutaArchivo = $data['avatar']->store('public/avatars');
+         //Aquí es donde logro atrapar el nombre del archivo usando la función de PHP basename
+         //$nombreArchivo = basename($rutaArchivo);
+        //}
+      //--------------------------------------------------
+      return User::create([
+          'name' => $data['name'],
+          'email' => $data['email'],
+          'provincia' => $data['provincia'],
+          'municipio' => $data['municipio'],
+          'password' => Hash::make($data['password']),
+          'avatar' => $nombreArchivo,
+          'role' => 1,
+      ]);
+  }
 
 
 }
