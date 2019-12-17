@@ -27,19 +27,19 @@
     <div class="row mt-5">
         <div class="col-lg-4 offset-lg-4">
             <div class="card w-100">
-                <img class="card-img-top" src="IMG/logo.jpg" alt="Foto de la pelicula">
+                <img class="card-img-top" src="IMG/logo.jpg" alt="Foto de la zapatill">
                 <div class="card-body">
-                    <h5 class="card-title text-center"></h5>
+                    <h5 class="card-title text-center">{{$producto->marca}} {{$producto->categoria}} </h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nisi minima nemo expedita distinctio ipsa eum magnam fugiat! Aspernatur, illo.</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  @foreach ($productos as $producto)
+
                     <li class="list-group-item ">Marca: {{$producto->marca}}</li>
                     <li class="list-group-item ">Categoria: {{$producto->categoria}}</li>
                     <li class="list-group-item">Talle: {{$producto->talle}}</li>
                     <li class="list-group-item">Precio: {{$producto->precio}}</li>
                 </ul>
-                  @endforeach
+
             </div>
             <a href="/crud" class="btn btn-danger" id="dangerman">Volver</a>
         </div>

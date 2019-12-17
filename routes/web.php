@@ -22,11 +22,18 @@ Route::get('/producto', 'ProductosController@index')->name('producto');
 Route::get('/perfil/{id}', 'UsuariosController@index' );
 //CRUD
 Route::get('/crud', 'CrudController@admin')->middleware('auth')->middleware('rol');
-Route::get('/agregarProducto', 'CrudController@agregar');
-Route::get('/borrarProducto', 'CrudController@borrar');
-Route::get('/detalleProducto', 'DetalleController@index');
-Route::get('/editarProducto', 'EditarController@index');
+Route::get('/detalleProducto/{id}', 'CrudController@detalle');
 Route::post('/buscar','CrudController@search');
+Route::get('/editarProducto/{id}', 'CrudController@edit');
+Route::post('/updateProducto/{id}', 'CrudController@update');
+Route::get('/borrarProducto/{id}', 'CrudController@borrar');
+
+Route::get('/agregarProducto', 'CrudController@agregar');
+// Route::post('/guardarProducto', 'CrudController@store');
+
+
+
+
 
 
 Route::get('/carritodecompras/{id}', 'CarritodecomprasController@index');

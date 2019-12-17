@@ -13,11 +13,11 @@
             @csrf
             <div class="page__demo">
               <label class="field a-field a-field_a1 page__field">
-                <input class="field__input a-field__input" placeholder="¿Que deseas buscar?" id="inputB" name="buscar" required>
-                  <span class="a-field__label-wrap">
-                    <span class="a-field__label" id="buscar">Buscador</span>
-                  </span>
+                <input class="field__input a-field__input w-100" placeholder="Ingresa id, marca o categoria" id="inputB" name="buscar" required>
               </label>
+              <span>
+                <a href="/agregarProducto" class="btn btn-secondary h-50" id="dangerman">+ Agregar Producto</a>
+              </span>
             </div>
       </form>
 
@@ -41,10 +41,13 @@
               <td>{{$producto->id}}</td>
               <td>{{$producto->marca}}</td>
               <td>{{$producto->categoria}}</td>
-              <td><a href="/detalleProducto?id={{$producto->id}}"><ion-icon name="eye"></ion-icon></a></td>
-              <td><a href="/editarProducto?id={{$producto->id}}"><ion-icon name="create"></ion-icon></a></td>
-              <td><a href="/borrarProducto?id={{$producto->id}}"><ion-icon name="close"></ion-icon></td></a>
+              <td><a href="/detalleProducto/{{$producto->id}}"><ion-icon name="eye"></ion-icon></a></td>
+              <td><a href="/editarProducto/{{$producto->id}}"><ion-icon name="create"></ion-icon></a></td>
+              <td><a class="btn btn-danger" onclick="return confirm('Estas seguro?')" href="/borrarProducto/{{$producto->id}}"><ion-icon name="close"></ion-icon></td></a>
             </tr>
+
+
+
 
           @endforeach
           <tr>

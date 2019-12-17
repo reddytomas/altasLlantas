@@ -30,10 +30,11 @@
         <h2 class="text-center">Editar Producto</h2>
        <div class="row mt-5">
             <div class="col-lg-8 offset-lg-2">
-                <form action="" method="post" enctype="multipart/formdata">
+                <form action="/updateProducto/{{$producto->id}}" method="post" enctype="multipart/formdata">
+                  @csrf
                     <div class="form-group">
                         <label for="marcaProducto">Marca</label>
-                        @foreach ($productos as $producto)
+
                         <input type="text" class="form-control" name="marca" id="marcaProducto" value="{{$producto->marca}}">
                     </div>
                     <div class="form-group">
@@ -47,7 +48,7 @@
                     <div class="form-group">
                         <label for="precioProducto">Precio</label>
                         <input type="number" class="form-control" name="precio" id="precioProducto" value="{{$producto->precio}}">
-                        @endforeach
+
                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar Producto</button>
                 </form>
