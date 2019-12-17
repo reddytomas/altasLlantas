@@ -16,7 +16,7 @@ class CheckRole
 
     public function handle($request, Closure $next)
     {
-        if ($request->user()->rol == 9) {
+        if ($request->user()->role == 9) {
           return $next($request);
         } else {
           return redirect('/home');

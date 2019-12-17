@@ -85,6 +85,9 @@
                                 </div>
                             </li>
                             <ul class="_perfilList">
+                              @if (auth()->user()->role == 9)
+                              <a class="btn btn-secondary btn-md" href="/crud" role="button"><li>Admins</li></a>
+                              @endif
                               <a class="nav-item nav-link"href="/perfil/{{auth()->user()->id}}" id="iniciar"><li><i class="fas fa-user-circle fa-2x"></i></li></a>
                               <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><li><i class="fas fa-shopping-cart"></i></li></a>
 
