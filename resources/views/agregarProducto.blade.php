@@ -35,8 +35,13 @@
                       <input type="text" class="form-control" name="marca" id="marcaProducto" value="">
                   </div>
                   <div class="form-group">
-                      <label for="categoriaProducto">Categoria</label>
-                      <input type="text" class="form-control" name="categoria" id="categoriaProducto" value="">
+                    <label>Categorias</label>
+                    <br>
+                    <select name="categoria">
+                      @foreach ($categorias as $categoria)
+                        <option value="categoria">{{ $categoria->name }}</option>
+                        @endforeach
+                      </select>
                   </div>
                   <div class="form-group">
                       <label for="talle">Talle</label>
@@ -47,6 +52,10 @@
                       <input type="number" class="form-control" name="precio" id="precioProducto" value="">
 
                   </div>
+                  <div class="form-group">
+                    <label for="precioProducto">foto</label>
+                    <input type="file" class="form-control" name="foto" id="foto">
+                   </div>
                   <button type="submit" class="btn btn-primary">Crear Producto</button>
               </form>
               <a href="/crud" class="btn btn-danger" id="dangerman">Volver</a>

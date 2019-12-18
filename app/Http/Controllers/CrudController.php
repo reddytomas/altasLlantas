@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Category;
 use App\Http\Controllers\ProductosController;
 
 class CrudController extends Controller
@@ -68,15 +69,48 @@ class CrudController extends Controller
 // para crear producto
 
     public function agregar(){
-      return view('agregarProducto');
+      $categorias = Category::all();
+      return view('agregarProducto')->with('categorias', $categorias);
     }
 
-    public function store(Request $request){
+    // public function create(Request $request)
+    // {
+    //   $nombreArchivo = 'user_default.jpg';
+    //   $imagen = $request->file('foto');
+    //   $imagen->store("public/productos");
+    //   Producto::create([
+    //       'marca' => $data['marca'],
+    //       'categoria' => $data['categoria'],
+    //       'talle' => $data['talle'],
+    //       'precio' => $data['precio'],
+    //       'featured_img' => $data['foto']
+    //     ]);
+    //     return view('crud');
+
+
+
+  public function store(Request $request){
       $this->validate($request,[ 'marca'=>'required', 'categoria'=>'required', 'talle'=>'required', 'precio'=>'required']);
+      
+      $imagen = $request->file('foto');
+      $imagen->store("public/productos");
+
         Producto::create($request->all());
 
         return redirect('/crud');
     }
+  // //   public function store(Request $request)
+  //   {
+  //
+  //     Producto::create([
+  //         'marca' => $request['marca'],
+  //         'categoria' => $categoria['categoria'],
+  //         'talle' => $request['talle'],
+  //         'precio' => $request['precio'],
+  //         'featured_img' => $request['foto']
+  //       ]);
+  //       return view('crud');
+  // }
 
 // para borrar producto
     public function borrar($id){
