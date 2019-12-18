@@ -15,9 +15,11 @@
         @foreach ($cart as $item)
           <tr>
             <th scope="row">{{$item->id}}</th>
-            <td>{{$item->name}}</td>
-            <td>{{$item->cant}}</td>
-            <td>{{$item->price}}</td>
+            <td>{{$item->marca}}</td>
+            <td>{{$item->categoria}}</td>
+            <td>{{$item->talle}}</td>
+            <td>{{$item->precio}}</td>
+            <td>{{$item->featured_img}}</td>
           </tr>
         @endforeach
       </tbody>
