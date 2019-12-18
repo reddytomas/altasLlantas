@@ -12,7 +12,7 @@ class CarritoController extends Controller
     public function index()
     {
       $cart = Cart::where("user_id", Auth::user()->id)->where("status",0)->get();
-      return view('carritodecompras/{id}', with('carritodecompras'));
+      return view('carritodecompras', compact('cart'));
     }
     //Este corresponde al que permite agregar al carrito
     public function store(Request $request)
