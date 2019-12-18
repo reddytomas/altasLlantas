@@ -38,8 +38,15 @@ Route::post('/guardarProducto', 'CrudController@store');
 
 
 
+//Carrito
+//Route::get('/carritodecompras/{id}', 'CarritodecomprasController@index');
+Route::post('/addtocart', 'CarritoController@store');
+Route::get('/carritodecompras/{id}', 'CarritoController@index')->middleware('auth');
+Route::post('/cartclose', 'CarritoController@cartclose');
+Route::get('/history', 'CarritoController@history')->middleware('auth');
 
-Route::get('/carritodecompras/{id}', 'CarritodecomprasController@index');
+
+//Otros
 Route::get('/faq', 'FaqController@index');
 Route::get('/detallado/{id}', 'DetalladoController@index')->middleware('auth');
 Route::get('/buscarProducto', 'BuscarController@index');
