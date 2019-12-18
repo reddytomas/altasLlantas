@@ -27,7 +27,7 @@
       <div class="spacer"></div>
      <div class="row mt-5">
           <div class="col-lg-8 offset-lg-2">
-              <form action="/guardarProducto" method="post" enctype="multipart/formdata">
+              <form action="/guardarProducto" method="post" enctype="multipart/form-data">
                 @csrf
                   <div class="form-group">
                       <label for="marcaProducto">Marca</label>
@@ -39,7 +39,7 @@
                     <br>
                     <select name="categoria">
                       @foreach ($categorias as $categoria)
-                        <option value="categoria">{{ $categoria->name }}</option>
+                        <option value="{{$categoria->name}}">{{ $categoria->name }}</option>
                         @endforeach
                       </select>
                   </div>
@@ -53,7 +53,7 @@
 
                   </div>
                   <div class="form-group">
-                    <label for="precioProducto">foto</label>
+                    <label for="fotoProducto}">foto</label>
                     <input type="file" class="form-control" name="foto" id="foto">
                    </div>
                   <button type="submit" class="btn btn-primary">Crear Producto</button>

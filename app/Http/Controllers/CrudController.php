@@ -90,12 +90,20 @@ class CrudController extends Controller
 
 
   public function store(Request $request){
-      $this->validate($request,[ 'marca'=>'required', 'categoria'=>'required', 'talle'=>'required', 'precio'=>'required']);
-      
-      $imagen = $request->file('foto');
-      $imagen->store("public/productos");
+      $this->validate($request, [
+        'marca'=>'required',
+        'categoria'=>'required',
+        'talle'=>'required',
+        'precio'=>'required',
+      ]);
 
-        Producto::create($request->all());
+      Producto::create([
+         'marca' => $request['marca'],
+         'categoria' => $request['categoria'],
+         'talle' => $request['talle'],
+         'precio' => $request['precio'],
+         'featured_img' => $request->file('foto')->store('img/productos')
+       ]);
 
         return redirect('/crud');
     }
