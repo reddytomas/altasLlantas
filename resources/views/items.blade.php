@@ -5,7 +5,7 @@
   @foreach ($productos as $producto)
   <article class="_producto col-sm-6 col-md-3 col-lg-2" id="_items">
   <a href="/detallado/{{$producto->id}}">
-    <img class="d-block w-100"src="{{ asset('storage/img/productos/'. $producto->featured_img )}}" alt="...">
+    <img class="d-block w-100"src="{{ asset('img/productos/'. $producto->featured_img )}}" alt="...">
     <h4><strong>{{$producto->marca}}</strong></h4>
     <p>{{$producto->categoria}}: ${{$producto->precio}}</p>
   </a>

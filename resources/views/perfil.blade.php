@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-<body>
   <div class="container-fluid m-0 p-0">
 
     <div class="jumbotron">
@@ -17,8 +16,7 @@
         <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><i class="fas fa-shopping-cart"></i></a>
 
     </div>
+  </div>
 
-
-  </body>
 
 @endsection
