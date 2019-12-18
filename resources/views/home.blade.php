@@ -42,11 +42,7 @@
       @foreach ($productos as $producto)
       <article class="_producto col-sm-6 col-md-3 col-lg-2" id="_items">
       <a href="/detallado/{{$producto->id}}">
-<<<<<<< HEAD
         <img class="d-block w-100"src="{{ '/img/productos/'. $producto->featured_img }}" alt="...">
-=======
-        <img class="d-block w-100"src="{{ Storage::url('img/productos/'. $producto->featured_img) }}" alt="...">
->>>>>>> 91b1796c149b4a3fa965b13d416435c880f04ed4
         <h4><strong>{{$producto->marca}}</strong></h4>
         <p>{{$producto->categoria}}: ${{$producto->precio}}</p>
       </a>
