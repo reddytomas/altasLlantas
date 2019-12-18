@@ -29,7 +29,7 @@ Route::post('/updateProducto/{id}', 'CrudController@update');
 Route::get('/borrarProducto/{id}', 'CrudController@borrar');
 
 Route::get('/agregarProducto', 'CrudController@agregar');
-// Route::post('/guardarProducto', 'CrudController@store');
+Route::post('/guardarProducto', 'CrudController@store');
 
 
 

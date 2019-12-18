@@ -10,7 +10,7 @@ class CrudController extends Controller
 {
   // para mostrar todos
     public function admin(){
-      $productos = Producto::paginate(10);
+      $productos = Producto::paginate(50);
       return view('crud', compact('productos'));
     }
 
@@ -75,13 +75,13 @@ class CrudController extends Controller
       $this->validate($request,[ 'marca'=>'required', 'categoria'=>'required', 'talle'=>'required', 'precio'=>'required']);
         Producto::create($request->all());
 
-        return view('crud');
+        return redirect('/crud');
     }
 
 // para borrar producto
     public function borrar($id){
       $producto = Producto::find($id)->delete();
-      return view('crud');
+      return redirect('/crud');
     }
 
 
