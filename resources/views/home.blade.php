@@ -54,18 +54,19 @@
     <!-- CONTACTO  y maps----------------------------->
     <section class="_contacto row p-3 mr-0 ml-1" id="contacto">
       <article class="col-sm-12 col-md-6" id="_contactarprimera">
-        <form>
+        <form action="/contactar" method="POST">
+          @csrf
           <h5 id="contactanos"class="_contactanosheader font-weight-bold">Contactanos</h5>
           <div class="form-group">
             <label for="exampleFormControlInput1">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Comentario</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="acá podes dejar tu mensaje..."></textarea>
+            <textarea name="msg" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="acá podes dejar tu mensaje..."></textarea>
           </div>
-          <button type="button" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
 
       </article>

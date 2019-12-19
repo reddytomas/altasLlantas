@@ -44,9 +44,9 @@
                         <div class="navbar-nav d-flex justify-content-around">
                           <a href="/home"  class="text-dark mr-3" id="_altasllantasfooter">Altas Llantas</a>
                           <a class="nav-item nav-link " href="/home">Home <span class="sr-only">(current)</span></a>
-                          <a class="nav-item nav-link" href="/items">Productos</a>
+                          <a class="nav-item nav-link" href="/home#productos">Productos</a>
                           <a class="nav-item nav-link" href="/faq">FAQ</a>
-                          <a class="nav-item nav-link" href="/contacto">Contacto</a>
+                          <a class="nav-item nav-link" href="/home#contacto">Contacto</a>
 
 
 
