@@ -40,9 +40,9 @@
             <option value="3">3</option>
           </select>
           <select class="custom-select  ">
-            <option value="1">US 9</option>
-            <option value="2">US 10</option>
-            <option value="3">US 11</option>
+            <option value="1">43</option>
+            <option value="2">44</option>
+            <option value="3">45</option>
           </select>
             <form class="" action="/addtocart" method="post">
               @csrf
