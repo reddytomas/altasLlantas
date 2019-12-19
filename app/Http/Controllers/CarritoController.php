@@ -31,7 +31,7 @@ class CarritoController extends Controller
         $item->status = 0;
         //Aquí guardo en la tabla de cart (carrito)
         $item->save();
-        return redirect('carritodecompras/{id}');
+        return redirect('carritodecompras');
     }
     //Aquí traigo todos los productos del carrito del usuario logueado y que ha seleccionado una vez que decide cerrar la compra.
     public function cartclose(Request $request){

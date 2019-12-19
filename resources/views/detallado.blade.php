@@ -44,7 +44,11 @@
             <option value="2">US 10</option>
             <option value="3">US 11</option>
           </select>
-          <a href="/carritodecompras/{id}"><button type="button" class="btn btn-dark">Agregar al carrito </button></a>
+            <form class="" action="/addtocart" method="post">
+              @csrf
+              <input type="hidden" name="id" value="{{$producto->id}}">
+              <button class="btn btn-dark">Agregar al carrito </button>
+            </form>
         </article>
 
         </li>
