@@ -27,7 +27,7 @@
 <!-- PRODUCTO ---------------------------------------------->
       <section class="row m-5 h-100">
         <article class="col-sm-12 col-12-md col-lg-6">
-          <img class="img-thumbnail img-fluid " src="{{ asset('img/productos/'. $producto->featured_img )}}" alt="...">
+          <img class="img-thumbnail img-fluid " src="{{Storage::url($producto->featured_img)}}" alt="...">
         </article>
 
         <article class="col-sm-12 col-12-md col-lg-6">
