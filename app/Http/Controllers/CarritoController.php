@@ -34,7 +34,7 @@ class CarritoController extends Controller
         return redirect('carritodecompras/{id}');
     }
     //Aquí traigo todos los productos del carrito del usuario logueado y que ha seleccionado una vez que decide cerrar la compra.
-    public function cartclose(Request $req){
+    public function cartclose(Request $request){
       $items = Cart::where("user_id", Auth::user()->id)->where("status",0)->get();
       //De esta forma genero el número del carrito para el usuario que está comprando
       $cart_number = Cart::max('cart_number') +1;
