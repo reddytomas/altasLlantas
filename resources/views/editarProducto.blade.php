@@ -51,10 +51,9 @@
 
                     </div>
                     <div class="form-group">
-                        <label for="foto">Foto</label>
-                        <input type="image" class="form-control" name="precio" id="precioProducto" value="{{$producto->featured_img}}">
-
-                    </div>
+                      <label for="fotoProducto">foto</label>
+                      <input type="fotoProducto" class="form-control" name="foto" id="fotoProducto">
+                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar Producto</button>
                 </form>
                 <a href="/crud" class="btn btn-danger" id="dangerman">Volver</a>
