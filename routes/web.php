@@ -51,5 +51,6 @@ Route::get('/faq', 'FaqController@index');
 Route::get('/detallado/{id}', 'DetalladoController@index')->middleware('auth');
 Route::get('/buscarProducto', 'BuscarController@index');
 Route::get('/items', 'ItemsController@index');
+Route::post('/buscarProducto', 'ItemsController@search');
 Route::get('/contacto', 'ContactoController@index');
 Route::post('/contactar', 'EmailController@contact')->name('contact');
