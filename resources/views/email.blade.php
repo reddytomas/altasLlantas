@@ -14,8 +14,8 @@
       <div class="container">
 
 
-      <h1>Administradores de Altas Llantas:</h1>
-      <h3>Recibieron la siguiente consulta en Altas Llantas:</h3>
+      <h1>Recibiste la siguiente consulta en Altas Llantas:</h1>
+      <h3>:</h3>
        <h4><strong>De: </strong>{{$email}}</h4>
       <h4><strong>Mensaje: </strong>{{$msg}}</h4>
 
