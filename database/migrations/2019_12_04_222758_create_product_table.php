@@ -19,8 +19,12 @@ class CreateProductsTable extends Migration
             $table->Integer('categoria');
             $table->Integer('talle');
             $table->Integer('precio');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('featured_img', 300);
             $table->timestamps();
 
+            $table->foreign('user_id')
+            ->references('id')->on('users');
         });
     }
 
