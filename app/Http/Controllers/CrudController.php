@@ -102,7 +102,7 @@ class CrudController extends Controller
          'categoria' => $request['categoria'],
          'talle' => $request['talle'],
          'precio' => $request['precio'],
-         'featured_img' => $request->file('foto')->store('img/productos')
+         'featured_img' => $request->file('foto')->store('public/img')
        ]);
 
         return redirect('/crud');
