@@ -43,9 +43,9 @@
 
                         </div>
 
-                        <div class="form-group row col-md-6">
-                            <div class="form-group" >
-                              <label for="provincia">Provincia</label>
+                        <div class="form-group row" id="margenform">
+                          <label for="provincia" class="col-md-4 col-form-label text-md-right">Provincia</label>
+                            <div class="col-md-6" id>
                               <select name="provincia" id="provincia" class="form-control">
 
                               </select>
@@ -55,9 +55,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row col-md-8">
-                            <div class="form-group">
-                              <label for="municipio">Municipio</label>
+                        <div class="form-group row" id="margenform">
+                          <label for="municipio" class="col-md-4 col-form-label text-md-right">Municipio</label>
+                            <div class="col-md-6">
                               <select name="municipio" id="municipio" class="form-control">
 
                               </select>

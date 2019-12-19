@@ -44,3 +44,15 @@ a:hover{
 b, p, a, form, button, h4, h5, h6{
   font-family: 'Montserrat', sans-serif;
 }
+#municipio{
+  text-align: center;
+}
+#provincia{
+  text-align: center;
+}
+/* #margenform{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+} */
