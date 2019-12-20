@@ -7,7 +7,7 @@
       <h1 class=" _tituloPagina ml-1 mr-1  bg-light text-dark pl-3 mb-3  text-center">Perfil</h1>
       <div class="row">
         <div class="col-sm-12 col-lg-6 d-flex justify-content-center ">
-          <img class="w-50"src="{{asset('storage/avatars/'.Auth::user()->avatar)}}" alt="">
+          <img class="w-75"src="{{asset('storage/avatars/'.Auth::user()->avatar)}}" alt="">
         </div>
 
         <div class="col-sm-12 col-lg-6 ">
