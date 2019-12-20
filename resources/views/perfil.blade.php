@@ -19,7 +19,7 @@
             <a class="btn btn-primary btn-lg w-50" href="#" role="button">Ver compras</a> <br>
             <hr>
             <p><br>Este es tu carrito de compras, donde podes seleccionar lo que quieras comprar. </p>
-            <a class="btn btn-primary btn-lg w-50" href="/carritodecompras/{id}" role="button"><i class="fas fa-shopping-cart"></i></a>
+            <a class="btn btn-primary btn-lg w-50" href="/carritodecompras" role="button"><i class="fas fa-shopping-cart"></i></a>
 
         </div>
       </div>
