@@ -24,14 +24,16 @@
             <td>{{$item->categoria}}</td>
             <td>{{$item->talle}}</td>
             <td>${{$item->precio}}</td>
-            <td>{{$item->featured_img}}</td>
+            <td><img class="w-25"src="{{Storage::url($item->featured_img)}}" alt="{{$item->featured_img}}"></td>
           </tr>
           @php
             $total = $total+ $item->precio;
           @endphp
+
         @endforeach
       </tbody>
     </table>
+    <hr>
     <form class="" action="/cartclose" method="post">
       @csrf
         <p><strong>Total:</strong> ${{$total}}</p>
