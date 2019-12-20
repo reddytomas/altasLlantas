@@ -31,7 +31,7 @@
           <li> <p>Compras</p></li><br>
           <a class="btn btn-primary btn-lg" href="#" role="button">Ver compras</a> <br>
           <li> <p><br>Carrito </p></li><br>
-          <a class="btn btn-primary btn-lg" href="/carritodecompras/{id}" role="button"><i class="fas fa-shopping-cart"></i></a>
+          <a class="btn btn-primary btn-lg" href="/carritodecompras" role="button"><i class="fas fa-shopping-cart"></i></a>
         </ul> --}}
 
       </div>
