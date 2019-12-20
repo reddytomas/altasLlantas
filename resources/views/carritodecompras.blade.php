@@ -1,3 +1,6 @@
+@php
+  $total = 0;
+@endphp
 @extends('layouts.app')
 @section('content')
 <div class="container">
@@ -7,25 +10,31 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Producto</th>
-          <th scope="col">Cantidad</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Talle</th>
           <th scope="col">Precio</th>
         </tr>
       </thead>
       <tbody>
+
         @foreach ($cart as $item)
           <tr>
             <th scope="row">{{$item->id}}</th>
             <td>{{$item->marca}}</td>
             <td>{{$item->categoria}}</td>
             <td>{{$item->talle}}</td>
-            <td>{{$item->precio}}</td>
+            <td>${{$item->precio}}</td>
             <td>{{$item->featured_img}}</td>
           </tr>
+          @php
+            $total = $total+ $item->precio;
+          @endphp
         @endforeach
       </tbody>
     </table>
     <form class="" action="/cartclose" method="post">
       @csrf
+        <p><strong>Total:</strong> ${{$total}}</p>
         <button type="submit" class="btn btn-success">Comprar</button>
     </form>
 </div>
