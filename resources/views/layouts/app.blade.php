@@ -40,7 +40,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="navbar-nav d-flex justify-content-around">
                           <a href="/home"  class="text-dark mr-3" id="_altasllantasfooter">Altas Llantas</a>
                           <a class="nav-item nav-link " href="/home">Home <span class="sr-only">(current)</span></a>
