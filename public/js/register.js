@@ -60,7 +60,7 @@ window.onload=function(){
     }
   }
   function validateProvincia(provincia){
-    let errorProvincia = dociment.getElementById('errorProvincia');
+    let errorProvincia = document.getElementById('errorProvincia');
     if (provincia.value == "") {
       provincia.classList.add('is-invalid');
       errorProvincia.innerHTML = "seleccione la provincia";
@@ -76,7 +76,7 @@ window.onload=function(){
   }
 
   function validateMunicipio(municipio){
-    let errorMunicipio = dociment.getElementById('errorMunicipio');
+    let errorMunicipio = document.getElementById('errorMunicipio');
     if (municipio.value == "") {
       municipio.classList.add('is-invalid');
       errorMunicipio.innerHTML = "seleccione la provincia";
